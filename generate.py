@@ -15,4 +15,15 @@ def generateCase():
     x = open("jCustomUpper.txt", "w")
     x.writelines(results)
     x.close()
-generateCase()
+
+def generateOrange(string):
+    x = open("jCustom.txt")
+    d = x.readlines()
+    results = []
+    for line in d:
+        results.append("/"+string+"/..;/"+line)
+    x = open("jCustomOrange_"+string+".txt", "w")
+    x.writelines(results)
+    x.close()
+
+generateOrange("static")
